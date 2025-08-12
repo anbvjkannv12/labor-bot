@@ -1,6 +1,6 @@
 // api/chat.js
 // Node / Vercel serverless function
-import fetch from "node-fetch";
+
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
@@ -55,3 +55,4 @@ export default async function handler(req, res) {
     res.status(500).json({ message: "Internal server error" });
   }
 }
+
