@@ -12,6 +12,10 @@ export default async function handler(req, res) {
   }
 
   const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+
+  // Debug: 查看環境變數長度（正式版部署前記得刪掉）
+  console.log("OPENAI_API_KEY length:", OPENAI_API_KEY?.length);
+
   if (!OPENAI_API_KEY) {
     res.status(500).json({ message: "Missing OPENAI_API_KEY in env" });
     return;
